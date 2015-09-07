@@ -1,0 +1,4 @@
+cd ~/workspace
+git add *
+git commit -m 'updated [filename.java]'
+git push
