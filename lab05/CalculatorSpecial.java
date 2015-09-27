@@ -1,10 +1,18 @@
-// calculator program
-// user will enter 2 integers and get a numerical result
+// calculator program from lab 4
+// continue asking user for input until they reply n or N
+// to the question 'Type n or N to stop'
 
 import java.util.Scanner;
-public class Calculator {
+public class CalculatorSpecial {
     public static void main(String [] args) {
-        
+
+// loop
+    boolean Y=true;
+    boolean n=true;
+    boolean N=true;
+    while (Y != n || N){
+
+// enter integers for calculator
         Scanner myScanner = new Scanner(System.in);
         System.out.print("Enter first integer: ");
         int a = myScanner.nextInt();
@@ -28,6 +36,11 @@ public class Calculator {
                 break;
             default:
                 System.out.println("illegal operator");
+            }
+
+// ask for stop after switch
+    System.out.println("Type n or N to stop");
+    System.out.println(Y);
         }
     }
 }
