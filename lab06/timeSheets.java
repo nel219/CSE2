@@ -9,84 +9,29 @@ public class timeSheets {
     public static void main(String [] args) {
 
 // declaring variables
-    int totalEmployees;
+    int totalEmployees=0;
     Scanner myScanner = new Scanner(System.in);
     System.out.print("Enter total number of employees: ");
     totalEmployees = myScanner.nextInt();
     
-    int payPerHour=0;
-    System.out.println("Enter amount employee is paid per hour in cents: ");
-    payPerHour = myScanner.nextInt();
-    
-    int hoursMonday=0;
-    System.out.println("Enter number hours employee worked Monday: ");
-    hoursMonday = myScanner.nextInt();
-    
-    int hoursTuesday=0;
-    System.out.println("Enter number hours employee worked Tuesday: ");
-    hoursTuesday = myScanner.nextInt();
-    
-    int hoursWednesday=0;
-    System.out.println("Enter number hours employee worked Wednesday: ");
-    hoursWednesday = myScanner.nextInt();
-    
-    int hoursThursday=0;
-    System.out.println("Enter number hours employee worked Thursday: ");
-    hoursThursday = myScanner.nextInt();
-    
-    int hoursFriday=0;
-    System.out.println("Enter number hours employee worked Friday: ");
-    hoursFriday = myScanner.nextInt();
-    
+    int hours=0;
+    int totalHours=0;
     int amountPaid=0;
+    int totalPay=0;
     
 // loop and nested loops
-    while (totalEmployees>0){
-        if (int i=totalEmployees){
-            amountPaid=((hoursMonday+hoursTuesday+hoursWednesday+hoursThursday+hoursFriday)*payPerHour);
-            
-        // enter next employees info
-            System.out.println("Enter anount next employee is paid per hour: ");
-payPerHour = myScanner.nextInt();
-System.out.println("Enter number hours employee worked Monday: ");
-hoursMonday = myScanner.nextInt();
-System.out.println("Enter number hours employee worked Tuesday: ");
-hoursTuesday = myScanner.nextInt();
-System.out.println("Enter number hours employee worked Wednesday: ");
-hoursWednesday = myScanner.nextInt();
-System.out.println("Enter number hours employee worked Thursday: ");
-hoursThursday = myScanner.nextInt();
-System.out.println("Enter number hours employee worked Friday: ");
-hoursFriday = myScanner.nextInt();
-}
-        else{
-            System.out.println();
+// when amounts added, has to be in loops or will only add once
+        for (int n=1; n<=totalEmployees; n++){
+            System.out.println("Enter amount employee is paid per hour in cents: ");
+            int payPerHour = myScanner.nextInt();
+            for (int day=1; day<=5; day++){
+                System.out.println("Enter number of hours worked for day "+day);
+                hours = myScanner.nextInt();
+                totalHours += hours;
+            }
+            amountPaid = payPerHour*totalHours;
+            totalPay += amountPaid;
         }
-            
-
-        }
-    int totalPay = (amountPaid*totalEmployees);
-    System.out.println("Total payroll of all employees: "+totalPay);
-        }
-    }
-
-
-
-
-
-
-
-
+        System.out.println("Total payroll of all employees in cents: "+totalPay);
     }
 }
-
-
-
-
-
-
-
-
-// you will have to add up the numbers worked by each 
-// employee and multiply that by that particular employee’s pay rate to 
-// get the employee’s pay for the week – and sum those values into total
