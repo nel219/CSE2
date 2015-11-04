@@ -10,7 +10,7 @@ public class areas {
     // area of rectangle
     public static double area(int length, int width){
         double rectangle=0;
-        rectangle = length*width;
+        rectangle = length*width;   
         return rectangle;
     }
     // area of trapezoid

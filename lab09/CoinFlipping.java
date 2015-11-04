@@ -20,22 +20,27 @@ public class CoinFlipping {
     public static int flip(){
         int head = 0;
         int tail = 1;
-        
-        int coinFlip = randomNum.nextInt(2);
-        if(coinFlip == 0){
-            
-            System.out.println("Heads");
-        }
-        else{
-            
-            System.out.println("Tails");
+        int coinFlip;
+        coinFlip = (int)(Math.round(Math.random()));
+        switch(coinFlip){
+            case 0:
+                System.out.println("Heads");
+            case 1:
+                System.out.println("Tails");
         }
         return coinFlip;
     }
     
 // flip method, parameter
     public static int numberFlips(){
-        
+        System.out.println("Enter number of times to flip.");
+        Scanner myScanner = new Scanner(System.in);
+        int n = myScanner.nextInt();
+        for (int i=0; i<n; i++){
+            flip();
+            int totalTails = totalTails+((int)(flip()));
+        }
+        return totalTails;
     }
     
 // main method
@@ -48,15 +53,11 @@ public class CoinFlipping {
         }
         else if(i>0 && i<=100){
             numberFlips();
+            System.out.println("Total tails = "+totalTails);
+            System.out.println("Total heads = "+(n-totalTails));
         }
         else{
             System.out.println("End program");
         }
     }
 }
-
-
-
-
-
-/* http://stackoverflow.com/questions/24174078/simple-coin-toss-using-random-class-in-java-the-do-while-loop-doesnt-seem-to-g
