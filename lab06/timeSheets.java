@@ -8,12 +8,13 @@ import java.util.Scanner;
 public class timeSheets {
     public static void main(String [] args) {
 
-// declaring variables
+// ask user to input number of employees
     int totalEmployees=0;
     Scanner myScanner = new Scanner(System.in);
     System.out.print("Enter total number of employees: ");
     totalEmployees = myScanner.nextInt();
-    
+
+// declaring variables    
     int hours=0;
     int totalHours=0;
     int amountPaid=0;
@@ -24,11 +25,13 @@ public class timeSheets {
         for (int n=1; n<=totalEmployees; n++){
             System.out.println("Enter amount employee is paid per hour in cents: ");
             int payPerHour = myScanner.nextInt();
+            // nested loop: ask to enter number of hours for each employee in loop
             for (int day=1; day<=5; day++){
                 System.out.println("Enter number of hours worked for day "+day);
                 hours = myScanner.nextInt();
                 totalHours += hours;
             }
+            // find total pay
             amountPaid = payPerHour*totalHours;
             totalPay += amountPaid;
         }

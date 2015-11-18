@@ -1,9 +1,10 @@
-// 3 methods, calculate mean, median, void print mehtod to print results
+// write 3 methods calculating mean, median,
+// and void print method to print results of 10 numbers
 
 import java.util.Scanner;       // scanner class
 public class methods {          // class
 
-// mean method
+// mean method, returns mean of 10 numbers
     public static double mean(int a, int b, int c, int d, int e, 
                             int f, int g, int h, int i, int j){
         Scanner myScanner = new Scanner(System.in);
@@ -12,7 +13,7 @@ public class methods {          // class
         return mean;
     }
 
-// median method
+// median method, returns median of 10 numbers
     public static double median(int a, int b, int c, int d, int e, 
                             int f, int g, int h, int i, int j){
         Scanner myScanner = new Scanner(System.in);
@@ -22,6 +23,7 @@ public class methods {          // class
     }
 
 //void print method
+// declares common variables used and asked user to initialize them
     public static void main(String [] args) {
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Enter 10 numbers from smallest to largest");
@@ -70,6 +72,7 @@ public class methods {          // class
                     break;
             }
         }
+        // use methods on variables
         System.out.println("The mean value is: "+mean(a, b, c, d,
                             e, f, g, h, i, j));
         System.out.println("The median value is: "+median(a, b, c,

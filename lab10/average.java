@@ -1,3 +1,5 @@
+// find the average of a specific set of numbers the user inputs
+
 import java.util.Scanner;
 public class average {
     public static void main(String [] args){

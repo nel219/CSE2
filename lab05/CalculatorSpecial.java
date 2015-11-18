@@ -6,13 +6,15 @@ import java.util.Scanner;
 public class CalculatorSpecial {
     public static void main(String [] args) {
 
-// loop
+// loop, set boolean values
     boolean Y=true;
     boolean n=true;
     boolean N=true;
     while (Y != n || N){
+    // while loop continues until loop manually broken
 
 // enter integers for calculator
+// ask user to input numbers and an operator
         Scanner myScanner = new Scanner(System.in);
         System.out.print("Enter first integer: ");
         int a = myScanner.nextInt();
@@ -21,6 +23,7 @@ public class CalculatorSpecial {
         System.out.print("Enter operator: ");
 
 // scanner for operator above in the switch statement below
+// find sum, difference, product, and quotient accordingly
         switch (myScanner.next()){
             case "+":
                 System.out.println("sum = "+(a+b));

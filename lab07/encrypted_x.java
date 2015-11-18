@@ -1,3 +1,4 @@
+// make a board with an invisible x in it
 
 import java.util.Scanner;
 public class encrypted_x {
@@ -5,6 +6,7 @@ public class encrypted_x {
     
 // declaring variables
     Scanner myScanner = new Scanner(System.in);
+    // ask user to input dimension of board
     System.out.print("Enter dimensions of square board: ");
     int input = myScanner.nextInt();
     
@@ -27,6 +29,7 @@ public class encrypted_x {
                     System.out.print("*");
                 }
             }
+            // give proper spacing
             System.out.println();
         }
     }
