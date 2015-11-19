@@ -34,7 +34,7 @@ public class move_array {
             }
             
             // Move value at index '0 to array length' to end of array
-            if (index==0 && index<array.length){
+            if (index>0 && index<array.length){         // or index==0
                 int temp = array[index];                // store value at index in temp variable
                 // shift all values at position 'index+1' to 'end of array' one position to left
                 for(int j=index+1; j<array.length-1; j++){
